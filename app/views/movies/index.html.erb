@@ -1,0 +1,52 @@
+<p style="color: green"><%= notice %></p>
+
+<%if user_signed_in?%>
+
+
+  <div id="movies">
+  <% @movies.each do |movie| %>
+
+  <div class="card-movie">
+    <h2><%=movie.name %></h2>
+    <%= image_tag(movie.image, style: "height: 300px;") %>     
+    <p>Rating: <%= movie.note %></p>
+    <span>Avaliado por: <%= movie.user.username %></span>
+    <p class="btn-more">
+      <%= link_to "Ver mais sobre", movie %>
+    </p>
+
+  </div>
+    
+  <% end %>
+</div>
+
+
+<%else%>
+ 
+  <section class="call-to-action">
+    
+    <main class="main-action-banner">
+      <h3>Olá <br> Seja bem vindo</h3>
+      <span>Avalie seus filmes e séries e compartilhe! </span>
+
+      <div class="action-btns">
+
+        <%= link_to "Login", new_user_session_path, class: "btn-to-login" %>
+
+        <%= link_to "Cadastre-se", new_user_registration_path, class: "btn-to-register" %>
+
+      </div>
+
+    </main>
+
+
+    
+
+  </section>
+  
+
+
+<%end%>
+
+
+

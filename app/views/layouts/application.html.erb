@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+<header>
+    
+
+    <nav>
+        <ul>
+            <li>
+                <%= link_to "Home", root_path%>
+            </li>
+
+           <% if user_signed_in? %>
+                <li>
+                    <%= link_to "Adicionar filme", new_movie_path %>
+                </li>
+
+                <li>
+                    <%= link_to "Meu perfil", edit_user_registration_path %>
+                </li>
+
+                <li>
+                  <%=button_to "Sair", destroy_user_session_path, method: :delete %>
+                </li>
+
+                <%= form_tag(movies_path, method: :get) do %>
+                  <%= text_field_tag :search, nil, placeholder: 'search' %>
+                  <%= submit_tag 'Buscar' %>
+                <% end %>
+
+           <%else%>
+                <li>
+                    <%= link_to "Login", new_user_session_path %>
+                </li>
+                <li>
+                    <%= link_to "Registro", new_user_registration_path %>
+                </li>
+
+           <%end%>
+
+         
+
+
+
+        
+        </ul>
+    
+    </nav>
+
+</header>
+
+
+
+  <body>
+    <%= yield %>
+  </body>
+
+</html>

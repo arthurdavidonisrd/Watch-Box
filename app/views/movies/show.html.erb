@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @movie %>
+
+<div>
+
+  <%if @movie.user == current_user%>
+    <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
+    
+    <%= button_to "Destroy this movie", @movie, method: :delete %>
+
+  <%else%>
+    <%= link_to "Back to movies", movies_path %>
+  
+  <%end%>
+
+</div>

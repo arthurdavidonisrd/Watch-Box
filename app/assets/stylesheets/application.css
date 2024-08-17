@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+body{
+    background-color: #1E1E1E;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    padding: 25px;
+}
+
+li a{
+    text-decoration: none;
+}
+
+
+
+header{
+    background-color: #000;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+
+
+input{
+    color: #000;
+}
+
+/* Estilizando o label */
+label {
+    display: block; /* Coloca o label acima do input */
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #fff; /* Cor do texto do label */
+    font-size: 14px; /* Tamanho da fonte */
+    
+
+}
+
+/* Estilizando o input */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+textarea {
+    width: 60%; /* Faz com que o input ocupe toda a largura do container */
+    padding: 12px 16px; /* Adiciona espaçamento interno (padding) */
+    margin-bottom: 16px; /* Espaçamento entre os inputs */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    background-color: #f9f9f9; /* Cor de fundo do input */
+    box-sizing: border-box; /* Garante que o padding esteja dentro da largura total */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    justify-content: center;
+}
+
+/* Estilo para o input quando focado */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+textarea:focus {
+    border-color: #007BFF; /* Altera a cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adiciona um efeito de sombra */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilizando o textarea */
+textarea {
+    resize: vertical; /* Permite que o usuário redimensione o textarea verticalmente */
+    min-height: 100px; /* Altura mínima do textarea */
+}
+
+/* Estilizando o input de botão */
+input[type="submit"], 
+button {
+    padding: 12px 24px;
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto branca */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+/* Estilo para o botão quando o mouse está em cima (hover) */
+input[type="submit"]:hover, 
+button:hover {
+    background-color: #0056b3; /* Tom mais escuro de azul */
+}
+
+/* Estilo para o botão quando pressionado (active) */
+input[type="submit"]:active, 
+button:active {
+    background-color: #004085; /* Tom ainda mais escuro de azul */
+}
+
+/* Estilo para botões desabilitados */
+input[type="submit"]:disabled, 
+button:disabled {
+    background-color: #ccc; /* Cor de fundo cinza */
+    cursor: not-allowed; /* Cursor indica que o botão está desabilitado */
+}
+
+form {
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    max-width: 400px; /* Largura máxima do formulário */
+    width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+    margin: auto;
+}
+
+
+.call-to-action{
+    background-image: url("https://4kwallpapers.com/images/wallpapers/the-walking-dead-2560x1440-15616.jpg");
+    height: 85vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.85;
+
+    
+
+}
+
+.main-action-banner{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-action-banner span{
+    margin-top: 10px;
+}
+
+.action-btns{
+    margin-top: 44px;
+
+}
+
+.action-btns a{
+    margin-right: 10px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.action-btns a:hover{
+    background-color: #333;
+}
+
+h3{
+    font-size: 2.5em;
+}
+
+
+h3 a{
+    font-size: 20px;
+}
+
+
+
+
+.movie-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-container img{
+    width: 200px;
+    height: 250px;
+}
+
+
+.card-movie{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    margin-bottom: 120px;
+    padding: 55px;
+    
+
+}
+
+.card-movie h2{
+    text-align: center;
+}
+
+#movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-more{
+    background-color: #000;
+    padding: 6px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+.btn-more a{
+    text-decoration: none;
+}
+
+.movie-container span{
+    font-size: 1.2em;
+}
+
+#movies p, span{
+    font-size: 1.3em;
+    text-align: center;
+}
+
+

@@ -1,0 +1,38 @@
+<div id="<%= dom_id movie %>">
+
+
+<%if @movie == 0%>
+
+  <p>No hay película seleccionada.</p>
+
+
+<%else%>
+
+  <section class="movie-container">
+    
+  
+
+    <span>Name: <%= movie.name %></span>
+    
+  <%if movie.image.attached? %>
+      <%= image_tag(movie.image, style: "height: 300px;") %>
+    <% end %>
+
+
+    <span>Description: <%= movie.description %></span>
+    
+
+
+    <span>Note: <%= movie.note %></span>
+    
+
+
+    <span>Avaliado por: <%= movie.user.username %></span>
+    
+
+  </section>
+<%end%>
+
+
+
+</div>
